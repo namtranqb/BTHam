@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div>
+            <label onclick="input_foot()"
+                ><em style="color: green">FootToMeter</em></label
+            >
+        </div>
+    </br>
+        <div>
+            <label onclick="input_meter()"
+                ><em style="color: blue">MeterToFoot</em></label
+            >
+        </div>
+
+        <script>
+            function footToMeter(foot) {
+                meter = 0.305 * foot;
+                return meter;
+            }
+            function meterToFoot(meter) {
+                foot = 3.279 * meter;
+                return foot;
+            }
+            function input_foot() {
+                let F = Number(prompt("Input Feet:"));
+                while (isNaN(F) || F <= 0) {
+                    alert("input Feet again!");
+                    F = Number(prompt("Input Feet:"));
+                }
+                footToMeter(F);
+                alert(`${F} feet convert to: ${meter} meter`);
+            }
+            function input_meter() {
+                let M = Number(prompt("Input Meter:"));
+                while (isNaN(M) || M <= 0) {
+                    alert("input Meter again!");
+                    M = Number(prompt("Input Meter:"));
+                }
+                meterToFoot(M);
+                alert(`${M} meter convert to: ${foot} feet `);
+            }
+        </script>
+    </body>
+</html>
