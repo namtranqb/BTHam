@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let min = parseInt(prompt("input min:"));
+            let max = parseInt(prompt("input max:"));
+            let a, b, c;
+            let min_numbers;
+            inputRandom(a, max, min);
+            inputRandom(b, max, min);
+            inputRandom(c, max, min);
+            checkMin(a, b, c);
+            alert(`${min_numbers}is min of :${a},${b},${c} `);
+            function checkMin(number1, number2, number3) {
+                min_numbers = number1;
+                if (number2 < min_numbers) {
+                    min_numbers = number2;
+                }
+                if (number3 < min_numbers) {
+                    min_numbers = number3;
+                }
+                return min_numbers;
+            }
+            function inputRandom(number, max, min) {
+                number = Math.floor(Math.random() * (max - min + 1) + min);
+                return number;
+            }
+        </script>
+    </body>
+</html>

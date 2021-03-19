@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function factorial(number) {
+                for (let i = 2; i <= number; i++) {
+                    fac *= i;
+                }
+                return fac;
+            }
+            function checkInt(number) {
+                return isNaN(number) || !Number.isInteger() || number <= 0;
+            }
+            let fac = 1;
+            let num = Number(prompt("input number:"));
+            while (checkInt(num)) {
+                num = Number(prompt("input number:"));
+            }
+
+            factorial(num);
+            alert(`Factorial of ${num} :${fac}`);
+        </script>
+    </body>
+</html>

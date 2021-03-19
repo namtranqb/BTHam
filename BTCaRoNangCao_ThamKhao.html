@@ -86,21 +86,21 @@
                 );
                 return number;
             }
-            function cell(row, col) {
-                if (matrix[row][col] == 0) {
-                    if (player == 1) {
-                        matrix[row][col] = 1;
-                        generateCaro(matrix);
-                        player = 2;
-                    } else {
-                        matrix[row][col] = 10;
-                        generateCaro(matrix);
-                        player = 1;
-                    }
-                } else {
-                    alert("invalid(gian lan)!");
-                }
-            }
+            // function cell(row, col) {
+            //     if (matrix[row][col] == 0) {
+            //         if (player == 1) {
+            //             matrix[row][col] = 1;
+            //             generateCaro(matrix);
+            //             player = 2;
+            //         } else {
+            //             matrix[row][col] = 10;
+            //             generateCaro(matrix);
+            //             player = 1;
+            //         }
+            //     } else {
+            //         alert("invalid(gian lan)!");
+            //     }
+            // }
 
             function main() {
                 let num = inputInterger("input number:");
